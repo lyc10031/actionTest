@@ -31,7 +31,9 @@ jobs:
       - name: Check out source code
         uses: actions/checkout@v1
       - name: run test command
-	run: ls -al && go version
+	run: | 
+		ls -al 
+		go version
       - name: Build
         run: go build .
 
