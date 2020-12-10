@@ -38,5 +38,13 @@ jobs:
       
       - name: Test
         run: go test -v .
-
+	
+      - name: local Test
+	env: 
+	MY_VE1: 1xas His th
+	MY_VE2: 2xas His th
+	MY_VE3: 3xas His th
+	MY_VE4: 4xas His th
+	run: |
+		echo $MY_VE1 $MY_VE2 $MY_VE3 $MY_VE4
 
