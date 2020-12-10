@@ -31,11 +31,15 @@ jobs:
           go-version: 1.12
         id: go
 
+      - name: get go info
+	run: go version
+
       - name: run local test
 	env: 
-		LOACL1: xx1
-		LOACL2: xx2
+	  LOACL1: xx1
+	  LOACL2: xx2
 	run: |
+		echo $LOACL1 $LOACL2
 		echo $LOACL1 $LOACL2
 
 
