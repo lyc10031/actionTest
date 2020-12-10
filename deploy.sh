@@ -1,2 +1,3 @@
 #!/bin/bash
-ifconfig eth0 | grep 'inet' | awk '{print $2}' | head -1
+arg=`ifconfig eth0 | grep 'inet' | awk '{print $2}' | awk -F ':' '{print $2}'`
+go run main.go $arg
