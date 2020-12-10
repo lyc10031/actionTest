@@ -14,6 +14,7 @@ jobs:
         LAST_NAME: Octocat
       run: |
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+	steps:
 
 - name: IP
   run: sudo ifconfig -a
