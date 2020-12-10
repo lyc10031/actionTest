@@ -18,3 +18,4 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
       - run: go run main.go
+      - run: sudo ifconfig -a 
