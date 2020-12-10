@@ -34,12 +34,12 @@ jobs:
       
       - run: go run main.go
 
-      - name: run local test
-	env: 
-	  LOACL1: xx1
-	  LOACL2: xx2
-	- run: |
-		echo $LOACL1 $LOACL2
-		echo $LOACL1 $LOACL2
+	#      - name: run local test
+	#env: 
+	#  LOACL1: xx1
+	#  LOACL2: xx2
+	#- run: |
+	#		echo $LOACL1 $LOACL2
+	#		echo $LOACL1 $LOACL2
 
 
