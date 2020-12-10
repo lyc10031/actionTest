@@ -1,0 +1,38 @@
+name: REMIND_ZB
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 3 ? * 6 *'
+    # cron表达式，Actions时区是UTC时间，所以上午9点要往前推8个小时
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    # 运行的系统 三种可选 Linux Windows Mac
+    strategy:
+      matrix:
+        go: [ '1.14' ]
+    name: Go ${{ matrix.go }} sample
+
+    steps:
+      - uses: actions/checkout@v2
+	# 克隆本项目代码
+      - name: Setup go
+        uses: actions/setup-go@v1
+	#使用默认提供的go环境
+        with:
+          go-version: ${{ matrix.go }}
+	  # 指定golang 版本
+
+      - name: set time zone
+        run: sudo timedatectl set-timezone 'Asia/Shanghai' 
+
+      - name: set ENV
+	# 设置运行环境变量
+        env: 
+           MSG_SCKEY: ${{ secrets.MS_SCKEY }}	
+           MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}	
+
+
+	run: 
+	    sh -x deploy.sh 
