@@ -6,11 +6,12 @@ import (
 	"net/http"
 	"strings"
 	"os"
+	"time"
 )
 var (str,security  string)
 
 func main() {
-    str = fmt.Sprintf("text=测试信息,Action来自 【 %s 】",os.Args[1],)
+	str = fmt.Sprintf("text=测试信息,Action来自 【 %s 】时间:%s",os.Args[1],time.Now().Format("2006-01-02 15:04:05"))
 	security = os.Args[2]
 	fmt.Println(str,security)
 		send()
