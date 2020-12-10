@@ -33,9 +33,9 @@ jobs:
 
       - name: Build
         run: go build .
+        run: go vserion
       
-      - name: local Test
-      -	run: go version
-
       - name: Test
         run: go test -v .
+
+
