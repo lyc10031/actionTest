@@ -32,8 +32,9 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Build
-        run: go build .
-        run: go vserion
+        run: |
+	       	go build .
+		go version 
       
       - name: Test
         run: go test -v .
