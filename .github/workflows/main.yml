@@ -30,13 +30,11 @@ jobs:
 
       - name: Check out source code
         uses: actions/checkout@v1
-	# - name: run test command
-	#run: | 
-	#	ls -al 
+	 - name: run test command
+	run:  
+		ls -al 
 	#	go version
-      - name: Build
-	run: ls
+	# - name: Build
+	#run: 
 	#run: go build .
 
-      - name: Test
-        run: go test -v .
