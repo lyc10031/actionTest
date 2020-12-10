@@ -28,9 +28,7 @@ jobs:
           go-version: 1.12
         id: go
 
-      - name: Check out source code
-        uses: actions/checkout@v1
-	 - name: run test command
+      - name: run test command
 	run:  
 		ls -al 
 	#	go version
