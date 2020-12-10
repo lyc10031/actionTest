@@ -20,4 +20,5 @@ jobs:
       - run: go run main.go
       - run: |
              sudo ifconfig -a 
-             ls -al 
+             ls -al
+             whoami 
