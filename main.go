@@ -7,17 +7,18 @@ import (
 	"strings"
 	"os"
 )
-var (str string)
+var (str,security  string)
 
 func main() {
-    str = fmt.Sprintf("text=测试信息,Action来自 【 %s 】",os.Args[1])
-	fmt.Println(str)
-	//	send()
+    str = fmt.Sprintf("text=测试信息,Action来自 【 %s 】",os.Args[1],)
+	security = os.Args[2]
+	fmt.Println(str,security)
+		send()
 
 }
 
 func send() {
-	url := "http://sc.ftqq.com/SCU124621T9af583eb31c71ee1ac579fe2db1fbeab5fa7fcd8a0079.send"
+	url := "http://sc.ftqq.com/" + security + ".send"
 	method := "POST"
 
 	payload := strings.NewReader(str)

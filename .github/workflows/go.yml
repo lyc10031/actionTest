@@ -17,4 +17,4 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - run: sh -x deploy.sh
+      - run: sh -x deploy.sh ${{ secrets.MS_SCKEY }}
