@@ -17,5 +17,8 @@ jobs:
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - run: timedatectl set-timezone Asia/Shanghai 
-      - run: sh -x deploy.sh ${{ secrets.MS_SCKEY }}
+      - name: set time zone
+        run: sudo timedatectl set-timezone 'Asia/Shanghai' 
+      - name: run code       
+        run: sh -x deploy.sh ${{ secrets.MS_SCKEY }}
+
