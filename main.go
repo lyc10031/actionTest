@@ -5,11 +5,14 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strings"
+	"os"
 )
+var (str string)
 
 func main() {
-	fmt.Println("xxxx")
-	// send()
+    str = fmt.Sprintf("text=测试信息,Action来自 【 %s 】",os.Args[1])
+	fmt.Println(str)
+	//	send()
 
 }
 
@@ -17,7 +20,7 @@ func send() {
 	url := "http://sc.ftqq.com/SCU124621T9af583eb31c71ee1ac579fe2db1fbeab5fa7fcd8a0079.send"
 	method := "POST"
 
-	payload := strings.NewReader(`text=22`)
+	payload := strings.NewReader(str)
 	client := &http.Client{}
 	req, err := http.NewRequest(method, url, payload)
 
