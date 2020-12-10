@@ -33,6 +33,9 @@ jobs:
 
       - name: Build
         run: go build .
+      
+      - name: local Test
+	run: go version
 
       - name: Test
         run: go test -v .
