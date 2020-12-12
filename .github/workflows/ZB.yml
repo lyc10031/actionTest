@@ -35,5 +35,4 @@ jobs:
            MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}   
 
       - name: Run code
-        run: 
-        sh -x deploy.sh 
+        run: sh -x deploy.sh 
