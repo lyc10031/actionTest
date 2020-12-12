@@ -38,5 +38,4 @@ jobs:
            MSG_SCKEY: ${{ secrets.WX_SECURITYKEY }} 
            MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}   
 
-      - name: Run code
         run: sh -x deploy.sh 
