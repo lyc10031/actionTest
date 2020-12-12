@@ -31,9 +31,9 @@ jobs:
       - name: set ENV
         # 设置运行环境变量
         env: 
-           MSG_SCKEY: ${{ secrets.WX_SECURITYKEY }}	
-           MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}	
+           MSG_SCKEY: ${{ secrets.WX_SECURITYKEY }} 
+           MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}   
 
       - name: Run code
         run: 
-	    sh -x deploy.sh 
+        sh -x deploy.sh 
