@@ -18,6 +18,7 @@ var (
 func main() {
 	security = os.Args[1]
 	WxUrl += security
+	fmt.Println(WxUrl)
 	send2(WxUrl)
 }
 
