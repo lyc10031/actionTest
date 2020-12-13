@@ -6,7 +6,7 @@ on:
     #  branches: main
   workflow_dispatch:
   schedule:
-    - cron: '46 18 ? * Sun'
+    - cron: '54 18 ? * Sun'
     # cron表达式，Actions时区是UTC时间，要往前推8个小时
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
       - name: set ENV
         # 设置运行环境变量
         env: 
-           MSG_SCKEY: ${{ secrets.WX_SECURITYKEY }} 
+           WX_SECURITYKEY: ${{ secrets.WX_SECURITYKEY }} 
            MSG_MEMBERS: ${{ secrets.MS_MEMBERS }}   
 
         run: sh -x deploy.sh 
