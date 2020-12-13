@@ -6,7 +6,7 @@ on:
     #  branches: main
   workflow_dispatch:
   schedule:
-    - cron: '03 19 ? * Sun'
+    - cron: '40 02 ? * Sat'
     # cron表达式，Actions时区是UTC时间，要往前推8个小时
 
 jobs:
